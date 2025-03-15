@@ -1,0 +1,252 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --purple-50: hsl(260, 100%, 95%);
+    --purple-300: hsl(264, 82%, 80%);
+    --purple-500: hsl(263, 55%, 52%);
+    --white: hsl(0, 0%, 100%);
+    --grey-100: hsl(214, 17%, 92%);
+    --grey-200: hsl(0, 0%, 81%);
+    --grey-400: hsl(224, 10%, 45%);
+    --grey-500: hsl(217, 19%, 35%);
+    --dark-blue: hsl(219, 29%, 14%);
+    --black: hsl(0, 0%, 7%);
+}
+
+html,
+body {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    background-color: #F6F5F6;
+}
+
+/* Typography */
+
+p {
+    font-size: 13px;
+    line-height: 140%;
+    font-weight: 500;
+}
+
+.highlight {
+    font-size: 20px;
+    line-height: 120%;
+    font-weight: 600;
+}
+
+.name {
+    font-size: 13px;
+    line-height: 110%;
+    font-weight: 500;
+}
+
+.position {
+    font-size: 11px;
+    line-height: 110%;
+    font-weight: 500;
+}
+
+/* Layout */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 60px;
+    margin: 0 auto;
+}
+
+.testimonials-grid {
+    max-width: 1114px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    gap: 32px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "testimonial-1 testimonial-1 testimonial-2 testimonial-3"
+    "testimonial-4 testimonial-5 testimonial-5 testimonial-3"
+    ;
+}
+
+.item-1 {
+    grid-area: testimonial-1;
+}
+
+.item-2 {
+    grid-area: testimonial-2;
+}
+
+.item-3 {
+    grid-area: testimonial-4;
+}
+
+.item-4 {
+    grid-area: testimonial-5;
+}
+
+.item-5 {
+    grid-area: testimonial-3;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 40px 60px 50px -47px hsla(220, 44%, 35%, 0.2474);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+
+/* Colors & Styling */
+.purple {
+    background-color: var(--purple-500);
+    background-image: url(./images/bg-pattern-quotation.svg);
+    background-position: top right 60px;
+    background-repeat: no-repeat;
+}
+
+.purple .name,
+.purple .highlight {
+    color: var(--white);
+}
+
+.purple .position,
+.purple p {
+    color: var(--purple-50);
+}
+
+.grey {
+    background-color: var(--grey-500);
+}
+
+.grey .name,
+.grey .highlight {
+    color: var(--white);
+}
+
+.grey .position,
+.grey p {
+    color: var(--grey-100);
+}
+
+.dark-blue {
+    background-color: var(--dark-blue);
+}
+
+.dark-blue .position,
+.dark-blue .name {
+    color: var(--white);
+}
+
+.dark-blue .highlight {
+    color: var(--grey-200);
+}
+
+.dark-blue p {
+    color: var(--grey-100);
+}
+
+.white {
+    background-color: var(--white);
+}
+
+.white .highlight,
+.white .name {
+    color: var(--grey-500);
+}
+
+.white .position,
+.white p {
+    color: var(--grey-400);
+}
+
+.profile-img {
+    border-radius: 50%;
+    border: 2px solid #A775F1;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 80px 60px;
+    }
+
+    .testimonials-grid {
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "testimonial-1 testimonial-1"
+        "testimonial-2 testimonial-3"
+        "testimonial-4 testimonial-4"
+        "testimonial-5 testimonial-5"
+        ;
+    }
+    
+    .item-1 {
+        grid-area: testimonial-1;
+    }
+    
+    .item-2 {
+        grid-area: testimonial-2;
+    }
+    
+    .item-3 {
+        grid-area: testimonial-3;
+    }
+    
+    .item-4 {
+        grid-area: testimonial-4;
+    }
+    
+    .item-5 {
+        grid-area: testimonial-5;
+    }
+
+    .purple {
+        background-image: url(./images/bg-pattern-quotation.svg);
+        background-position: top right 120px;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 75px 35px;
+    }
+
+    .testimonials-grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .purple {
+        background-image: none;
+    }
+}
