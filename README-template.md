@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/socratesioa/four-card-features-section)
-- Live Site URL: (https://socratesioa.github.io/four-card-features-section)
+- Solution URL: (https://github.com/socratesioa/testimonials-grid-section)
+- Live Site URL: (https://socratesioa.github.io/testimonials-grid-section/)
 
 ## My process
 
